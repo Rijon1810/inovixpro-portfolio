@@ -1,0 +1,17 @@
+/* src/app/globals.css */
+
+/* Define font variable */
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-white: #FFFFFF;
+  --Gray-600: #475467;
+  --theme-color: #3edbfe;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background: var(--bg-white);
+  width: 1222px;
+  margin: 0 auto;
+}
