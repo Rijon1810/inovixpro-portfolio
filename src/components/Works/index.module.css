@@ -1,79 +1,146 @@
+/* General Wrapper for the Component */
 .wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.titleWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 56px;
+  position: relative;
+  top: 90px;
 }
 
-.title {
+/* Arrow Styling */
+.arrowLeft, .arrowRight {
+  position: absolute;
+  top: -40px; 
+  right: 60px;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 24px; 
   color: #161b24;
-  text-align: center;
-  font-family: "SF Pro";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 590;
-  line-height: normal;
-  letter-spacing: 2px;
+  filter: opacity(1);
+
 }
 
+.arrowLeft {
+  right: 100px; 
+}
+
+/* Square Div for Image Carousel */
 .square {
-  width: 23px;
-  height: 23px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  border: 1px solid var(--Gray-600);
-}
-
-.workList {
   display: flex;
-  flex-direction: row;
-  gap: 28px;
-}
-
-.work {
-  border-radius: 10px;
-  background: #edf5f9;
-  height: 505px;
-  width: 388px;
-}
-
-.workTitle {
-  color: #161b24;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-top: 19px;
-  padding-left: 24px;
-}
-
-.viewAllWorkWrapper {
-  width: 100%;
-  display: flex;
+  width: 1616px;
+  height: 444px;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
   align-items: center;
-  justify-content: center;
+}
+
+/* Image Wrapper */
+.imageWrapper {
+  width: 536px; /* Width for each image container */
+  height: 100%;
+}
+
+/* Image Styling */
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area */
+  display: block;
+}
+
+/* View All Work Button */
+.viewAllWorkWrapper {
+  margin-top: 50px; /* Space between content and button */
 }
 
 .viewAllWorkButton {
-  height: 60px;
-  width: 169px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 37px;
-  background: var(--Gray-600);
-  color: var(--white, #fff);
-  font-family: "SF Pro";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 590;
-  line-height: 24px;
+  padding: 18px 28px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
   cursor: pointer;
-  margin-bottom: 92px;
+  transition: background-color 0.3s ease;
+}
+
+.viewAllWorkButton:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .square {
+    width: 1200px;
+    height: 350px;
+  }
+
+  .imageWrapper {
+    width: 400px;
+  }
+
+  .arrowLeft, .arrowRight {
+    font-size: 20px; /* Smaller arrows */
+  }
+
+  .arrowLeft {
+    right: 80px;
+  }
+
+  .arrowRight {
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .square {
+    width: 768px;
+    height: 250px;
+  }
+
+  .imageWrapper {
+    width: 256px;
+  }
+
+  .arrowLeft, .arrowRight {
+    font-size: 18px;
+  }
+
+  .arrowLeft {
+    right: 60px;
+  }
+
+  .arrowRight {
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .square {
+    width: 100%;
+    height: 200px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+
+  .arrowLeft, .arrowRight {
+    font-size: 16px;
+  }
+
+  .arrowLeft {
+    right: 50px;
+  }
+
+  .arrowRight {
+    right: 10px;
+  }
 }

@@ -1,43 +1,219 @@
-.wrapper {
+/* Base header styling */
+.header {
+  width: 100%;
+  height: 48px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
+  align-items: center;
+  padding: 44px 70px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.navList {
+.logo {
+  width: auto;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 46px;
+}
+
+.logoText {
+  font-family: 'Inter', sans-serif;
+  font-size: 29.14px;
+  font-weight: 400;
+  line-height: 35.27px;
+  color: #000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-left: 110px;
 }
 
 .navItem {
-  color: var(--Gray-600);
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #101828;
+  text-decoration: none;
 }
 
-.navItem:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--theme-color);
-}
-
-.contact {
+/* Right side section */
+.rightSide {
   display: flex;
-  padding: 12px 42px;
-  justify-content: center;
   align-items: center;
-  border-radius: 37px;
-  border: 1px solid #161b24;
+  gap: 60px;
+}
+
+.press {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #101828;
+  text-decoration: none;
+}
+
+.callButton {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid #101828;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.callIcon {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #101828;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin: 0 8px;
+}
+
+.callText {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #101828;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.bottomTitleWrapper {
-  display: flex;
-  flex-direction: row;
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #101828;
+  margin: 4px 0;
+}
+
+/* Responsive design adjustments */
+
+/* Extra large screens (1200px and above) */
+@media (max-width: 1200px) {
+  .header {
+    padding: 44px 50px;
+  }
+
+  .nav {
+    gap: 40px;
+  }
+
+  .rightSide {
+    gap: 40px;
+  }
+}
+
+/* Large screens (1024px to 1200px) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 44px 30px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+
+  .rightSide {
+    gap: 30px;
+  }
+}
+
+/* Tablets and smaller screens (768px to 1024px) */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 16px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.showMenu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navItem {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .rightSide {
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 999;
+  }
+
+  .callButton {
+    display: none;
+  }
+
+  /* Add a backdrop for menu */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    display: none;
+  }
+
+  .backdrop.active {
+    display: block;
+  }
+
+  /* Hamburger icon animation */
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Darken body when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 20px;
+  }
+
+  .nav {
+    gap: 24px;
+  }
 }

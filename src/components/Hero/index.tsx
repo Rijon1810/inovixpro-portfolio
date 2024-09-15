@@ -1,55 +1,54 @@
+"use client";
+
 import React from 'react';
 import styles from './index.module.css';
-
-const serviceList = [
-  'User interface',
-  'User experience',
-  'SaaS Expert',
-  'Web Development',
-  'IOS & Android  Development',
-];
+import { FaPlane } from 'react-icons/fa'; // Import vector icon
 
 const Hero = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.topTitle}>Design and Development agency</div>
-      <div className={styles.transformTextAndTalk}>
-        <div className={styles.transformText}>Transforming</div>
-        <div className={styles.letsTalkButton}>
-          <div className={styles.letsTalkText}>Lets Talk</div>
-          <div className={styles.arrowIconWrapper}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="55"
-              height="55"
-              viewBox="0 0 55 55"
-              fill="none"
-            >
-              <path
-                d="M37.4547 30.5691L34.2325 30.5615L34.2499 23.1278L18.7351 38.6115L16.4589 36.3307L31.9313 20.8894L24.5885 20.8723L24.596 17.6501L37.4849 17.6802L37.4547 30.5691Z"
-                fill="white"
-              />
-            </svg>
-          </div>
+    <section className={styles.landing}>
+      {/* Loved by Founders Section */}
+      <div className={styles.topSection}>
+        <div className={styles.avatars}>
+          <img src="/fame1.png" alt="Avatars" className={styles.avatarImages} />
         </div>
-      </div>
-      <div className={styles.yourIdeasInto}>your Ideas into</div>
-      <div className={styles.bottomTitleWrapper}>
-        <div className={styles.subTitle}>
-          Customized development solutions that are visually stunning,
-          user-friendly, and seamlessly functional
-        </div>
-        <div className={styles.transformText}>Innovation</div>
       </div>
 
-      <div className={styles.serviceList}>
-        {serviceList.map((service) => (
-          <div className={styles.service} key={service}>
-            {service}
-          </div>
-        ))}
+      {/* Main Headline */}
+      <div className={styles.headline}>
+        Results that drive higher <br />
+        <span className={styles.bold}>CONVERSIONS</span>, boost <span className={styles.bold}>REVENUE</span>.
       </div>
-    </div>
+
+      {/* Subtext */}
+      <div className={styles.subtext}>
+        Design, copy, and development engineered to turn browsers into <br />
+        buyers and drive sales on autopilot.
+      </div>
+
+      {/* Call to Action Button */}
+      <div className={styles.ctaContainer}>
+        <button className={styles.ctaButton}>
+          <span className={styles.ctaText}>BOOK A CALL</span>
+          <FaPlane className={styles.ctaIcon} /> {/* Using vector icon */}
+        </button>
+      </div>
+      <p className={styles.ctaSubtext}>It's Free. No subscription required.</p>
+
+      {/* Client Logos */}
+      <div className={styles.clients}>
+        <div className={styles.rectangleBackground}> {/* Rectangle background */}
+          <img src="/Rectangle.png" alt="Rectangle" className={styles.rectangle} />
+          <img src="/fame3.png" alt="Fame3 Logo" className={styles.clientLogo} />
+        </div>
+      </div>
+
+      {/* Recent Work Section */}
+      <div className={styles.recentWork}>
+      <img src="/Recent work.png" alt="riso" className={styles.riso} />
+      <img src="/Frame4.png" alt="Arrow" className={styles.arrow} />
+      </div>
+    </section>
   );
 };
 

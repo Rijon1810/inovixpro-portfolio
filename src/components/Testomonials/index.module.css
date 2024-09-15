@@ -1,0 +1,149 @@
+/* Wrapper and container styling */
+.testimonialsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: absolute;
+    top: 3500px;
+    left: 0;
+    width: 100%;
+    gap: 48px;
+  }
+  
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .testimonialText {
+    font-family: Inter, sans-serif;
+    font-size: 33.15px;
+    font-weight: 300;
+    line-height: 40.12px;
+    letter-spacing: 0.354px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .lovedByText {
+    font-family: Inter, sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 62.93px;
+    letter-spacing: 0.47px;
+    text-align: center;
+    color: #555;
+  }
+  
+  /* Grid layout with responsive design */
+   /* Grid layout with responsive design */
+   .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-auto-rows: minmax(100px, auto); 
+    gap: 56px;
+    width: 100%;
+  }
+  
+  .frameChild {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    background: #F4F4F4;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: auto; 
+  }
+  
+   .frameChild + .frameChild {
+    margin-bottom: 1px;
+  }
+  
+  /* Image and text styling */
+  .imageWrapper {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%; /* Circular profile image */
+    margin-bottom: 12px;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Align name and designation in a row next to the image */
+  .profileInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .profileDetails {
+    margin-left: 16px; /* Add space between image and text */
+  }
+  
+  .profileDetails span {
+    display: block;
+  }
+  
+  .designation {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  /* Description and stars styling */
+  .comment {
+    font-style: normal;
+    color: #555;
+    line-height: 1.5;
+    word-break: break-word;
+    margin-bottom: 12px;
+  }
+  
+  .stars {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  
+    .lovedByText {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gridContainer {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .lovedByText {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  
+    .testimonialText {
+      font-size: 24px;
+    }
+  }
+  

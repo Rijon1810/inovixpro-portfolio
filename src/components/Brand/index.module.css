@@ -1,0 +1,207 @@
+.section {
+  padding: 90px 20px; /* Added padding for mobile view */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 54px;
+  color: #000;
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000;
+}
+
+.imageTextContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.imageDiv {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.contentContainer {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.contentSection {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.brandingTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 54px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.sectionText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #667085;
+}
+
+.sectionTextX {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #131414;
+}
+
+.icon {
+  width: 46px;
+  height: 45px;
+  margin-left: 10px;
+  vertical-align: middle;
+  float: right;
+  margin-top: -38px;
+}
+
+.separator {
+  border: 0.5px solid #141313;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Thinner separator */
+.thinner {
+  border: 0.25px solid #CACACA;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .sectionText, .sectionTextX {
+    font-size: 16px;
+  }
+
+  .contentContainer {
+    padding-left: 20px; /* Reduced padding for tablets */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 10px; /* Adjust padding for mobile */
+  }
+
+  .imageTextContainer {
+    flex-direction: column; /* Stack image and content vertically */
+    text-align: center;
+  }
+
+  .imageDiv {
+    margin-bottom: 20px;
+  }
+
+  .contentContainer {
+    padding-left: 0; /* Remove padding for smaller screens */
+    margin-top: 20px;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionText, .sectionTextX {
+    font-size: 14px;
+  }
+}
+
+/* For very small screens (e.g., portrait phones) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .sectionText, .sectionTextX {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 35px;
+    margin-top: -30px;
+  }
+
+  .separator {
+    margin: 15px 0;
+  }
+}

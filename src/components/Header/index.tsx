@@ -1,41 +1,53 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import styles from './index.module.css';
-import Image from 'next/image';
-
-const navList = [
-  {
-    title: 'Home',
-    url: '/home',
-  },
-  {
-    title: 'Services',
-    url: '/services',
-  },
-  {
-    title: 'Projects',
-    url: '/projects',
-  },
-  {
-    title: 'About us',
-    url: '/about-us',
-  },
-];
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  };
+
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.logo}>
-        <Image height={28} width={124} src="/logo.svg" alt="logo" />
-      </div>
-      <div className={styles.navList}>
-        {navList.map((navItem) => (
-          <div className={styles.navItem} key={navItem.title}>
-            {navItem.title}
+    <>
+      {/* Add backdrop when menu is open */}
+      <div className={`${styles.backdrop} ${menuOpen ? styles.active : ''}`} onClick={toggleMenu}></div>
+
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <span className={styles.logoText}>Inovixpro</span>
+        </div>
+
+        <nav className={`${styles.nav} ${menuOpen ? styles.showMenu : ''}`}>
+          <a href="#" className={styles.navItem}>HOW IT WORKS</a>
+          <a href="#" className={styles.navItem}>PRICING</a>
+          <a href="#" className={styles.navItem}>WORK</a>
+          <a href="#" className={styles.navItem}>FAQ</a>
+        </nav>
+
+        <div className={styles.rightSide}>
+          <div className={styles.callButton}>
+            <a href="#" className={styles.press}>PRESS</a>
+            <span className={styles.callIcon}>C</span>
+            <span className={styles.callText}>TO BOOK A CALL</span>
           </div>
-        ))}
-      </div>
-      <div className={styles.contact}>Contact</div>
-    </div>
+          <div
+            className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
+            onClick={toggleMenu}
+          >
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+          </div>
+        </div>
+      </header>
+    </>
   );
 };
 
