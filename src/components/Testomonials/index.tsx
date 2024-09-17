@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './index.module.css';
+import React from 'react'
+import'./index.css';
 
 const data = [
   {
@@ -14,7 +14,7 @@ const data = [
     image: '/Frame 1000006187.png',
     name: 'John Doe',
     designation: 'Manager',
-    description: 'Excellent service! Highly recommended.',
+    description: 'Excellent Amazing products, very satisfied with the results and customer service. Will definitely be returning for more! Amazing products, very satisfied with the results and customer service.recommended.',
     stars: '/stars.png',
   },
   {
@@ -37,7 +37,7 @@ const data = [
     image: '/Frame 1000006187.png',
     name: 'John Doe',
     designation: 'Manager',
-    description: 'Excellent service! Highly recommended.',
+    description: 'Amazing products, very satisfied with the results and customer service. Will definitely be returning for more! Amazing products, very satisfied with the results and customer service.',
     stars: '/stars.png',
   },
   {
@@ -52,37 +52,30 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <div className={styles.testimonialsWrapper}>
-      <div className={styles.secondContainer}>
-        <div className={styles.testimonialText}>Testimonials</div>
-        <div className={styles.lovedByText}>LOVED BY BUSINESSES WORLDWIDE</div>
+    <div className="testimonials-wrapper">
+      <div className="testimonials-header">
+        <h3 className="testimonials-subtitle">Testimonials</h3>
+        <h2 className="testimonials-title">LOVED BY BUSINESSES WORLDWIDE</h2>
       </div>
-
-      <div className={styles.gridContainer}>
-        {data.map((profile, index) => {
-          const isLongDescription = profile.description.length > 150;
-          return (
-            <div
-              className={`${styles.frameChild} ${isLongDescription ? styles.longDescription : ''}`}
-              key={index}
-            >
-              <div className={styles.stars}>
-                <img src={profile.stars} alt="Stars" />
+      
+      <div className="testimonials-grid">
+        {data.map((testimonial, index) => (
+          <div key={index} className="testimonial-card">
+            <div className="testimonial-content">
+              <img src={testimonial.stars} alt="Rating" className="testimonial-stars" />
+              <p className="testimonial-description">{testimonial.description}</p>
+            </div>
+            <div className="testimonial-footer">
+              <div className="testimonial-avatar">
+                <img src={testimonial.image} alt={testimonial.name} />
               </div>
-              <div className={styles.comment}>{profile.description}</div>
-
-              <div className={styles.commentWrapper}>
-                <div className={styles.imageWrapper}>
-                  <img src={profile.image} alt={profile.name} />
-                </div>
-                <div className={styles.profileDetails}>
-                  <span>{profile.name}</span>
-                  <span className={styles.designation}>{profile.designation}</span>
-                </div>
+              <div className="testimonial-info">
+                <p className="testimonial-name">{testimonial.name}</p>
+                <p className="testimonial-designation">{testimonial.designation}</p>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

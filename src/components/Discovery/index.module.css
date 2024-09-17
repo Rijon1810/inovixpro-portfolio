@@ -145,7 +145,11 @@
     text-align: center; 
   }
   .imageGroup{
-    margin-left: 20px;
+    margin-left: 115px;
+  }
+  .personalInfo{
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 
   .discoveryContent {
@@ -164,18 +168,14 @@
     font-size: 36px;
   }
 
-  .calendarContainer {
-    width: 100%; /* Full width on smaller screens */
-  }
-
   .day {
-    width: 50px; /* Adjust day circle size for small screens */
-    height: 50px;
+    width: 28px; /* Adjust day circle size for small screens */
+    height: 28px;
   }
 }
 
 @media (max-width: 480px) {
   .calendarGrid {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(6, 1fr); 
   }
 }

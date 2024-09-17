@@ -162,7 +162,8 @@
   }
 
   .faqItem {
-      padding: 12px;
+    width: 350px;
+    margin-left: 28px;
   }
 
   .faqQuestion {

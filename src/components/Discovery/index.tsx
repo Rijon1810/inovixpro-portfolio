@@ -1,29 +1,19 @@
 'use client';
-import React, { useState } from 'react';
-import dayjs, { Dayjs } from 'dayjs';
+import React, { useEffect } from 'react';
 import styles from './index.module.css';
 
 const Discovery: React.FC = () => {
-  const [currentDate, setCurrentDate] = useState<Dayjs>(dayjs());
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  const startOfMonth = currentDate.startOf('month');
-  const endOfMonth = currentDate.endOf('month');
-  const daysInMonth = endOfMonth.date();
-  const startDayOfWeek = startOfMonth.day();
-
-  // Generate an array of dates for the calendar
-  const generateCalendarDates = () => {
-    const calendarDates: (number | null)[] = [];
-    for (let i = 0; i < startDayOfWeek; i++) {
-      calendarDates.push(null);
-    }
-    for (let i = 1; i <= daysInMonth; i++) {
-      calendarDates.push(i);
-    }
-    return calendarDates;
-  };
-
-  const calendarDates = generateCalendarDates();
+    return () => {
+      // Clean up script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section className={styles.section}>
@@ -42,28 +32,11 @@ const Discovery: React.FC = () => {
       </div>
       <div className={styles.separator}></div>
       <div className={styles.right}>
-        <div className={styles.calendarContainer}>
-          <div className={styles.header}>
-            <h1 className={styles.titles}>Select a date</h1>
-            <div className={styles.nav}>
-              <span className={styles.arrow} onClick={() => setCurrentDate(currentDate.subtract(1, 'month'))}>{'<'}</span>
-              <h2 className={styles.subTitle}>{currentDate.format('MMMM YYYY')}</h2>
-              <span className={styles.arrow} onClick={() => setCurrentDate(currentDate.add(1, 'month'))}>{'>'}</span>
-            </div>
-          </div>
-          <div className={styles.weekdays}>
-            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
-              <span key={day}>{day}</span>
-            ))}
-          </div>
-          <div className={styles.calendarGrid}>
-            {calendarDates.map((date, index) => (
-              <span key={index} className={styles.day}>
-                {date || ''}
-              </span>
-            ))}
-          </div>
-        </div>
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/rizraizada000/30min"
+          style={{ minWidth: '320px', height: '700px' }}
+        />
       </div>
     </section>
   );
