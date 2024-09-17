@@ -1,89 +1,156 @@
-/* Container for the entire section */
-.frame1171276269 {
+/* Base styles */
+.container {
     background: #F1F1F1;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    padding: 20px;
-    gap: 20px; /* Add gap between columns */
-    flex-wrap: wrap; /* Allow wrapping in smaller screens */
+    margin-top: 100px;
+    padding: 20px; /* Added padding for better spacing */
 }
 
-/* Center column */
-.frame1171276272 {
+/* Center Column */
+.centerColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    flex: 1; /* Allow it to grow */
-    min-width: 250px; /* Minimum width for responsiveness */
-    max-width: 400px; /* Limit maximum width */
+    flex: 1;
 }
 
-/* Title styles */
+/* Title */
 .title {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 300;
     font-size: 44px;
     line-height: 53px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     margin-bottom: 20px;
 }
 
-/* Button styles */
+/* Book Call Button */
 .bookCallButton {
     padding: 16px 36px;
-    background: #000000;
+    background: #000;
     border-radius: 4px;
     border: none;
     cursor: pointer;
 }
 
-.bookCallText {
+.bookCallButtonText {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 22px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
 }
 
-/* Left column */
-.frame1171276267,
-.frame1171276268 {
+/* Service Column */
+.serviceColumn {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    flex: 1; /* Allow it to grow */
-    min-width: 250px; /* Minimum width for responsiveness */
-    max-width: 400px; /* Limit maximum width */
+    flex: 1;
+    max-width: 400px;
 }
 
-/* Service Text */
-.serviceText,
-.serviceTextRight {
+.serviceText {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-size: 13px;
     color: #667085;
-    margin-bottom: 10px; /* Spacing between items */
+    margin-left: 74px;
+    margin-right: 74px;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-    .frame1171276269 {
+
+/* Large tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .container {
         flex-direction: column;
         gap: 20px;
     }
 
-    .frame1171276267,
-    .frame1171276268 {
-        display: none; /* Hide left and right columns on small screens */
+    .serviceColumn {
+        max-width: 100%; /* Allow full width on medium screens */
+    }
+
+    .title {
+        font-size: 36px; /* Slightly smaller title for medium screens */
+        line-height: 44px;
+    }
+
+    .bookCallButton {
+        padding: 14px 30px; /* Adjust padding for medium screens */
+    }
+
+    .bookCallButtonText {
+        font-size: 16px; /* Adjust font size for medium screens */
+    }
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .serviceColumn {
+        display: none; /* Hide service column on small screens */
+    }
+
+    .title {
+        font-size: 32px; /* Adjust title size for small screens */
+        line-height: 40px;
+        margin-bottom: 16px; /* Reduce margin for small screens */
+    }
+
+    .bookCallButton {
+        padding: 12px 28px; /* Adjust button padding for small screens */
+    }
+
+    .bookCallButtonText {
+        font-size: 16px; /* Adjust font size for small screens */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px; /* Smaller title for mobile screens */
+        line-height: 36px;
+        margin-bottom: 12px; /* Reduce margin for mobile screens */
+    }
+
+    .bookCallButton {
+        padding: 10px 24px; /* Further adjust button padding for mobile */
+    }
+
+    .bookCallButtonText {
+        font-size: 14px; /* Smaller font size for mobile screens */
+    }
+
+    .serviceText {
+        font-size: 12px; /* Adjust service text size for mobile */
+        margin-left: 20px; /* Reduce margins for mobile */
+        margin-right: 20px;
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+    .title {
+        font-size: 24px; /* Even smaller title for extra small mobile */
+        line-height: 32px;
+        margin-bottom: 8px; /* Further reduce margin for extra small screens */
+    }
+
+    .bookCallButton {
+        padding: 8px 20px; /* Further adjust button padding for extra small screens */
+    }
+
+    .bookCallButtonText {
+        font-size: 12px; /* Smaller font size for extra small screens */
     }
 }

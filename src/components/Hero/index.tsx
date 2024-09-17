@@ -30,14 +30,14 @@ const Hero = () => {
       <div className={styles.ctaContainer}>
         <button className={styles.ctaButton}>
           <span className={styles.ctaText}>BOOK A CALL</span>
-          <FaPlane className={styles.ctaIcon} /> {/* Using vector icon */}
+          <FaPlane className={styles.ctaIcon} /> 
         </button>
       </div>
       <p className={styles.ctaSubtext}>It's Free. No subscription required.</p>
 
       {/* Client Logos */}
       <div className={styles.clients}>
-        <div className={styles.rectangleBackground}> {/* Rectangle background */}
+        <div className={styles.rectangleBackground}> 
           <img src="/Rectangle.png" alt="Rectangle" className={styles.rectangle} />
           <img src="/fame3.png" alt="Fame3 Logo" className={styles.clientLogo} />
         </div>

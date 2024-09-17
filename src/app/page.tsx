@@ -5,6 +5,9 @@ import HowItsWorks from '@/components/HowItsWorks';
 import BookACall from '@/components/BookACall';
 import styles from './page.module.css';
 import Testimonials from '@/components/Testomonials';
+import Questions from '@/components/Questions';
+import Discovery from '@/components/Discovery';
+import Footer from '@/components/Footer'
   
 export default function Home() {
   return (
@@ -15,6 +18,9 @@ export default function Home() {
       <HowItsWorks />
       <BookACall />
       <Testimonials />
+      <Questions />
+      <Discovery />
+      <Footer />
      </main>
   );
 }

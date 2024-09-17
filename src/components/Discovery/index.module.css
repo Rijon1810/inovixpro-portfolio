@@ -1,0 +1,181 @@
+.section {
+  display: flex;
+  align-items: stretch;
+  margin: 50px;
+  /* flex-direction: column; */
+}
+
+.left, .right {
+  flex: 1;
+  margin-left: 80px;
+}
+
+.discoveryContent {
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: #847F7B;
+}
+
+.companyName {
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #1E1D1D;
+}
+
+.personalInfo {
+  margin-top: 150px;
+}
+
+.size {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.name {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #161615;
+  margin-top: 9px;
+}
+
+.duration {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.separator {
+  width: 1px;
+  background-color: #847F7B;
+  height: auto;
+}
+
+.calendarContainer {
+  width: 100%;
+  max-width: 552px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.titles {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  color: #000;
+  margin: 0;
+}
+
+.arrow {
+  font-size: 20px;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.subTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 17px;
+  font-weight: 300;
+  color: #212121;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.day {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212121;
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Optional hover effect */
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN - Media Queries at the End */
+
+@media (max-width: 1200px) {
+  .left, .right {
+    margin-left: 40px;
+  }
+
+  .companyName {
+    font-size: 40px;
+  }
+
+  .duration {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; 
+  }
+
+  .left, .right {
+    margin-left: 0;
+  }
+
+  .discoveryContent, .companyName, .name, .duration, .title {
+    text-align: center; 
+  }
+  .imageGroup{
+    margin-left: 20px;
+  }
+
+  .discoveryContent {
+    font-size: 22px; 
+  }
+
+  .companyName {
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .duration {
+    font-size: 36px;
+  }
+
+  .calendarContainer {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .day {
+    width: 50px; /* Adjust day circle size for small screens */
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendarGrid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}

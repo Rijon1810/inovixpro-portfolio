@@ -8,7 +8,7 @@ const HowItsWorks: React.FC = () => {
       <div className={styles.howItsWorksColumns}>
         <div className={styles.leftColumn}>
           <div className={styles.leftColumnContent}>
-            <div className={styles.leftColumnHeading}>Market <br />Research</div>
+            <div className={styles.leftColumnHeading}>Market<br />Research</div>
             <div className={styles.leftColumnText}>
               Recognized in the industry as the best podcast agency of 2022, fastest-growing podcast company, and the number one LinkedIn Marketing Agency
             </div>

@@ -1,0 +1,175 @@
+/* General Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+}
+
+/* Top Image */
+.topImage {
+  position: absolute;
+  right: 10%;
+  height: 150px;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Q&A Text */
+.qAndA {
+  font-family: 'Inter', sans-serif;
+  font-size: 33px;
+  line-height: 40px;
+  text-align: center;
+  color: #847f7b;
+  margin-bottom: 10px;
+}
+
+/* Questions Title */
+.questionsTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 52px;
+  line-height: 63px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* FAQ Container */
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+/* FAQ Item */
+.faqItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+/* FAQ Item Hover/Active State */
+.faqItem:hover, .faqItem.active {
+  background: #e0e0e0;
+}
+
+/* FAQ Text */
+.faqText {
+  margin-left: 15px;
+}
+
+/* FAQ Question */
+.faqQuestion {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  color: #101828;
+}
+
+/* FAQ Answer */
+.faqAnswer {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #475467;
+  margin-top: 10px;
+}
+
+/* Bottom Image */
+.bottomImage {
+  position: absolute;
+  left: 10%;
+  height: 150px;
+  bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  
+  .questionsTitle {
+      font-size: 40px;
+      line-height: 50px;
+  }
+
+  .qAndA {
+      font-size: 24px;
+      line-height: 30px;
+  }
+
+  .faqQuestion {
+      font-size: 20px;
+  }
+
+  .faqAnswer {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .questionsTitle {
+      font-size: 32px;
+      line-height: 40px;
+  }
+
+  .qAndA {
+      font-size: 20px;
+      line-height: 25px;
+  }
+
+  .faqItem {
+      padding: 14px;
+  }
+
+  .faqQuestion {
+      font-size: 18px;
+  }
+
+  .faqAnswer {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+
+  .questionsTitle {
+      font-size: 28px;
+      line-height: 36px;
+  }
+
+  .qAndA {
+      font-size: 18px;
+      line-height: 22px;
+  }
+
+  .faqItem {
+      padding: 12px;
+  }
+
+  .faqQuestion {
+      font-size: 16px;
+  }
+
+  .faqAnswer {
+      font-size: 10px;
+  }
+}

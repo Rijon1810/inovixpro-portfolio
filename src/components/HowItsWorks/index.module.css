@@ -3,179 +3,89 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
 }
 
 /* Header section */
 .howItsWorksHeader {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 300;
     font-size: 52px;
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.47px;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
 }
 
-/* Container for columns */
 .howItsWorksColumns {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 0;
-    gap: 40px; 
-    width: 1314px;
-    height: 312px;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px; 
+    box-sizing: border-box;
 }
 
-/* Left column */
 .leftColumn {
-    width: 630px;
-    height: 312px;
     background: #101828;
+    color: #fff;
+    padding: 20px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    padding: 20px 30px; /* Added padding inside the left column */
+    max-width:100% ;
+
 }
 
-/* Content of the left column */
-.leftColumnContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Section heading in left column */
-.leftColumnHeading {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 44px;
-    line-height: 57px;
-    letter-spacing: -1.325px;
-    text-transform: uppercase;
-    color: #FFFFFF; /* White color for text */
-}
-
+.leftColumnHeading,
 .sectionHeading {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 44px;
+    font-size: 35px;
     line-height: 57px;
     letter-spacing: -1.325px;
     text-transform: uppercase;
-    color: #181717; /* Color for text */
-}
-
-/* Section text in left column */
-.leftColumnText {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 36px;
-    letter-spacing: 0.67px;
-    color: #FFFFFF;
 }
 
 /* Center column */
-.centerColumn {
-    width: 320px;
-    height: 312px;
-    background: #F1F1F1;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 30px; /* Added padding inside the center column */
-}
-
-/* Right column */
+.centerColumn,
 .rightColumn {
-    width: 320px;
-    height: 312px;
     background: #F1F1F1;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 30px; /* Added padding inside the right column */
+    padding: 20px;
+    border-radius: 10px;
+    
 }
 
-/* Content of the right column */
-.rightColumnContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 22px;
-}
-
-/* Section heading in right column */
-.rightColumnHeading {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 44.2px;
-    line-height: 57px;
-    letter-spacing: -1.325px;
-    text-transform: uppercase;
-    color: #101828;
-}
-
-/* Section text in right column */
+.sectionText,
 .rightColumnText {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 300;
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 0.67px;
-    color: #101828;
+}
+.rightColumnHeading{
+    font-size: 35px;
+    line-height: 57px;
+    letter-spacing: -1.325px;
+    text-transform: uppercase;
 }
 
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .howItsWorksColumns {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .leftColumn {
-        width: 100%;
-        height: auto;
-    }
-    
-    .centerColumn, .rightColumn {
-        width: 100%;
-        height: auto;
-    }
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .howItsWorksHeader {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-
-    .leftColumnHeading, .sectionHeading, .rightColumnHeading {
-        font-size: 36px;
-    }
-
-    .leftColumnText, .sectionText, .rightColumnText {
-        font-size: 16px;
-    }
-
     .howItsWorksColumns {
         flex-direction: column;
         gap: 20px;
     }
+ 
 
-    .leftColumn, .centerColumn, .rightColumn {
-        width: 100%;
-        height: auto;
+   
+    .howItsWorksHeader {
+        font-size: 36px;
+    }
+
+    .leftColumnHeading,
+    .sectionHeading {
+        font-size: 32px;
+    }
+
+    .sectionText,
+    .rightColumnText {
+        font-size: 18px;
     }
 }

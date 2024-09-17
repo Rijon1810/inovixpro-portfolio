@@ -1,0 +1,196 @@
+.footer {
+  background: #101828;
+  padding: 32px 16px;
+}
+
+.footerGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.leftSection {
+  width: 100%;
+  max-width: 388px;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+
+.companyName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 29.141px;
+  line-height: 35px;
+}
+
+.companyDesc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.rightSection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 724px;
+  flex-wrap: wrap;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 177px;
+  flex-wrap: wrap;
+}
+.make{
+  display: grid;
+  margin-top: -19px;
+}
+
+.linkGroup {
+  margin-bottom: 16px;
+}
+
+.linkGroup h3 {
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.linkGroup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkGroup li {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  margin-bottom: 20px; 
+}
+
+.socialMedia {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.socialIcon {
+  color: #FFFFFF;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: #FFD700;
+}
+
+.contactInfo {
+  gap: 24px;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.phone, .email {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.phone p:first-child, .email p:first-child {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.phone p:last-child, .email p:last-child {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footerGroup {
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightSection {
+    width: 100%;
+    max-width: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLinks {
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .contactInfo {
+    flex-direction: column; /* Stack contact info and social media vertically */
+    gap: 16px;
+  }
+
+  .socialMedia {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerGroup {
+    padding: 16px;
+  }
+
+  .leftSection {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rightSection {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLinks {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .contactInfo {
+    gap: 16px; /* More gap between contact info and social icons */
+    flex-direction: column;
+  }
+
+  .socialMedia {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .companyName {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .companyDesc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .linkGroup li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .socialIcon {
+    font-size: 20px;
+  }
+
+  .contactInfo {
+    gap: 12px; /* Slightly tighter gap on small devices */
+  }
+}

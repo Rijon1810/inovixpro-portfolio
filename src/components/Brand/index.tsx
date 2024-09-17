@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './index.module.css';
 
 const Brand = () => {
-    const imageSrc = '/Rectangle 3698.png'; // Define the image at the top
-    const arrowIconSrc = '/Group 56.png'; // Define the arrow icon at the top
+    const imageSrc = '/Rectangle 3698.png';
+    const arrowIconSrc = '/Group 56.png';
 
     return (
         <section className={styles.section}>
