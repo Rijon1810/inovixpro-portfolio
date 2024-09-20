@@ -130,10 +130,9 @@
 
 /* Client logos */
 .clientLogo {
-  position: relative;
-  width: 1074px;
+  
   height: auto;
-  z-index: 2;
+  width: 100%;
 }
 
 /* Recent Work Section */

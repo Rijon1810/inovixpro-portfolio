@@ -3,7 +3,6 @@
     background: #F1F1F1;
     display: flex;
     margin-top: 100px;
-    padding: 20px; /* Added padding for better spacing */
 }
 
 /* Center Column */
@@ -16,7 +15,6 @@
     flex: 1;
 }
 
-/* Title */
 .title {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
@@ -64,29 +62,29 @@
 
 /* Responsive styles */
 
-/* Large tablets and smaller desktops */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
         gap: 20px;
     }
 
-    .serviceColumn {
-        max-width: 100%; /* Allow full width on medium screens */
-    }
-
+  
     .title {
-        font-size: 36px; /* Slightly smaller title for medium screens */
+        font-size: 36px; 
         line-height: 44px;
     }
 
     .bookCallButton {
-        padding: 14px 30px; /* Adjust padding for medium screens */
+        padding: 14px 30px; 
     }
 
     .bookCallButtonText {
-        font-size: 16px; /* Adjust font size for medium screens */
+        font-size: 16px; 
     }
+    .serviceColumn {
+        display: none; 
+    }
+
 }
 
 /* Tablets and smaller screens */
@@ -97,43 +95,43 @@
     }
 
     .serviceColumn {
-        display: none; /* Hide service column on small screens */
+        display: none; 
     }
 
     .title {
-        font-size: 32px; /* Adjust title size for small screens */
+        font-size: 32px; 
         line-height: 40px;
-        margin-bottom: 16px; /* Reduce margin for small screens */
+        margin-bottom: 16px; 
     }
 
     .bookCallButton {
-        padding: 12px 28px; /* Adjust button padding for small screens */
+        padding: 12px 28px; 
     }
 
     .bookCallButtonText {
-        font-size: 16px; /* Adjust font size for small screens */
+        font-size: 16px;
     }
 }
 
 /* Mobile screens */
 @media (max-width: 480px) {
     .title {
-        font-size: 28px; /* Smaller title for mobile screens */
+        font-size: 28px;
         line-height: 36px;
-        margin-bottom: 12px; /* Reduce margin for mobile screens */
+        margin-bottom: 12px;
     }
 
     .bookCallButton {
-        padding: 10px 24px; /* Further adjust button padding for mobile */
+        padding: 10px 24px;
     }
 
     .bookCallButtonText {
-        font-size: 14px; /* Smaller font size for mobile screens */
+        font-size: 14px;
     }
 
     .serviceText {
-        font-size: 12px; /* Adjust service text size for mobile */
-        margin-left: 20px; /* Reduce margins for mobile */
+        font-size: 12px;
+        margin-left: 20px; 
         margin-right: 20px;
     }
 }
@@ -141,16 +139,16 @@
 /* Extra small mobile screens */
 @media (max-width: 360px) {
     .title {
-        font-size: 24px; /* Even smaller title for extra small mobile */
+        font-size: 24px;
         line-height: 32px;
-        margin-bottom: 8px; /* Further reduce margin for extra small screens */
+        margin-bottom: 8px;
     }
 
     .bookCallButton {
-        padding: 8px 20px; /* Further adjust button padding for extra small screens */
+        padding: 8px 20px;
     }
 
     .bookCallButtonText {
-        font-size: 12px; /* Smaller font size for extra small screens */
+        font-size: 12px;
     }
 }

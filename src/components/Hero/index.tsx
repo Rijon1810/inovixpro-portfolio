@@ -1,10 +1,14 @@
-"use client";
+'use client';
 
 import React from 'react';
 import styles from './index.module.css';
-import { FaPlane } from 'react-icons/fa'; // Import vector icon
+import { FaPlane } from 'react-icons/fa';
 
-const Hero = () => {
+interface HeroProps {
+  onBookACallClick: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onBookACallClick }) => {
   return (
     <section className={styles.landing}>
       {/* Loved by Founders Section */}
@@ -28,16 +32,16 @@ const Hero = () => {
 
       {/* Call to Action Button */}
       <div className={styles.ctaContainer}>
-        <button className={styles.ctaButton}>
+        <button className={styles.ctaButton} onClick={onBookACallClick}>
           <span className={styles.ctaText}>BOOK A CALL</span>
-          <FaPlane className={styles.ctaIcon} /> 
+          <FaPlane className={styles.ctaIcon} />
         </button>
       </div>
       <p className={styles.ctaSubtext}>It's Free. No subscription required.</p>
 
       {/* Client Logos */}
       <div className={styles.clients}>
-        <div className={styles.rectangleBackground}> 
+        <div className={styles.rectangleBackground}>
           <img src="/Rectangle.png" alt="Rectangle" className={styles.rectangle} />
           <img src="/fame3.png" alt="Fame3 Logo" className={styles.clientLogo} />
         </div>
@@ -45,8 +49,8 @@ const Hero = () => {
 
       {/* Recent Work Section */}
       <div className={styles.recentWork}>
-      <img src="/Recent work.png" alt="riso" className={styles.riso} />
-      <img src="/Frame4.png" alt="Arrow" className={styles.arrow} />
+        <img src="/Recent work.png" alt="riso" className={styles.riso} />
+        <img src="/Frame4.png" alt="Arrow" className={styles.arrow} />
       </div>
     </section>
   );

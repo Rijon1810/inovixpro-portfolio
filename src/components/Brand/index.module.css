@@ -1,14 +1,17 @@
+/* General Styles */
 .section {
-  padding: 90px 20px; /* Added padding for mobile view */
+  padding: 90px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .textContainer {
   text-align: center;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .title {
@@ -16,14 +19,13 @@
   font-weight: 300;
   font-size: 54px;
   color: #000;
-  margin-top: 75px;
   margin-bottom: 20px;
 }
 
 .subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -32,7 +34,8 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .imageDiv {
@@ -40,7 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Added margin for spacing */
+  margin-bottom: 20px;
 }
 
 .image {
@@ -56,7 +59,10 @@
 
 .contentSection {
   margin-bottom: 40px;
-  position: relative;
+}
+
+.highlight {
+  margin-bottom: -30px;
 }
 
 .brandingTitle {
@@ -106,37 +112,72 @@
   margin: 20px 0;
 }
 
-/* Thinner separator */
 .thinner {
   border: 0.25px solid #CACACA;
 }
 
 /* Responsive Styles */
-/* For mobile devices */
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+  .section {
+    padding: 70px 15px;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .sectionText, .sectionTextX {
+    font-size: 15px;
+  }
+
+  .contentContainer {
+    padding-left: 20px;
+  }
+
+  .imageDiv {
+    max-width: 80%;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+    margin-top: -67px;
+  }
+}
+
+/* Small Screens (Tablets) */
 @media (max-width: 768px) {
   .section {
-    padding: 60px 10px; /* Adjust padding for mobile */
+    padding: 60px 10px;
   }
 
   .imageTextContainer {
-    flex-direction: column; /* Stack image and content vertically */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentContainer {
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .brandingTitle {
     text-align: center;
   }
 
   .imageDiv {
-    margin-bottom: 20px;
-    width: 100%; /* Ensure image div takes full width */
-  }
-
-  .contentContainer {
-    width: 100%; /* Ensure content container takes full width */
-    padding-left: 0; /* Remove padding for smaller screens */
-    margin-top: 20px;
-    text-align: left; /* Align text to left for better readability */
-  }
-
-  .image {
-    max-width: 100%;
+    width: 100%;
   }
 
   .title {
@@ -156,9 +197,12 @@
   }
 }
 
-/* For very small screens (e.g., portrait phones) */
+/* Mobile Screens */
 @media (max-width: 480px) {
-  
+  .section {
+    padding: 50px 5px;
+  }
+
   .title {
     font-size: 30px;
   }
@@ -172,26 +216,21 @@
   }
 
   .sectionText, .sectionTextX {
-    font-size: 12px;
+    font-size: 11px;
+    text-align: left;
   }
 
-  .contentContainer {
-    width: 95%; /* Ensure content container takes full width */
-    margin-top: 15px; /* Adjust margin for better spacing */
-  }
-
-  .imageDiv {
-    margin-bottom: 15px; /* Reduce margin for small screens */
-    width: 95%; /* Ensure full width */
+  .image {
+    max-width: 100%;
   }
 
   .icon {
-    width: 30px;
-    height: 30px;
-    margin-top: -40px;
+    width: 25px;
+    height: 25px;
+    margin-top: -56px;
   }
 
   .separator {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 }

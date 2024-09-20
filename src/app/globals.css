@@ -4,7 +4,7 @@ body {
   background: var(--bg-white);
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto; /* Allow vertical scrolling */
 }
@@ -25,64 +25,4 @@ section {
   padding: 40px 0;
 }
 
-/* Responsive handling for all devices */
 
-/* Large devices and desktops */
-@media (max-width: 1024px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scroll on larger screens */
-  }
-
-  .main {
-    overflow-x: hidden; /* Ensure no overflow */
-  }
-
-  section {
-    padding: 30px 0; /* Adjust padding for medium devices */
-  }
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .main {
-    overflow-x: hidden;
-  }
-
-  section {
-    padding: 25px 0; /* Reduce padding for smaller tablets */
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .main {
-    overflow-x: hidden;
-  }
-
-  section {
-    padding: 20px 0; /* Further reduce padding for mobile */
-  }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 360px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .main {
-    overflow-x: hidden;
-  }
-
-  section {
-    padding: 15px 0; 
-  }
-}

@@ -179,3 +179,69 @@
     grid-template-columns: repeat(6, 1fr); 
   }
 }
+
+@media (max-width: 360px) {
+  .section {
+    margin: 20px; /* Reduce the margin */
+  }
+
+  .left, .right {
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .discoveryContent {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .companyName {
+    font-size: 28px; /* Further reduce the font size */
+    margin-top: 10px; /* Adjust top margin */
+  }
+
+  .personalInfo {
+    margin-top: 0;
+    margin-bottom: 30px; /* Adjust bottom margin */
+  }
+
+  .size {
+    width: 40px; /* Reduce size of circular elements */
+    height: 40px;
+  }
+
+  .name {
+    font-size: 24px; /* Reduce font size */
+  }
+
+  .duration {
+    font-size: 32px; /* Reduce the size for smaller screens */
+  }
+
+  .calendarContainer {
+    max-width: 300px; /* Reduce the width of the calendar */
+  }
+
+  .titles {
+    font-size: 24px; /* Adjust title font size */
+  }
+
+  .arrow {
+    font-size: 16px; /* Reduce arrow icon size */
+  }
+
+  .subTitle {
+    font-size: 18px; /* Adjust subtitle font size */
+  }
+
+  .weekdays, .calendarGrid {
+    font-size: 14px; /* Smaller font size for weekdays and calendar numbers */
+  }
+
+  .day {
+    width: 25px; /* Reduce size of day circles */
+    height: 25px;
+  }
+
+  .calendarGrid {
+    grid-template-columns: repeat(5, 1fr); /* Adjust calendar grid layout */
+  }
+}

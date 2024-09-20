@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Header section */
@@ -15,6 +17,7 @@
     letter-spacing: 0.47px;
     text-transform: uppercase;
     color: #000;
+    box-sizing: border-box;
 }
 
 .howItsWorksColumns {
@@ -27,30 +30,33 @@
     box-sizing: border-box;
 }
 
+/* Left column */
 .leftColumn {
     background: #101828;
     color: #fff;
     padding: 20px;
     border-radius: 12px;
-    max-width:100% ;
-
+    flex: 2; /* Make the left column twice as wide as the others */
+    box-sizing: border-box; /* Include padding in width */
 }
 
-.leftColumnHeading,
-.sectionHeading {
-    font-size: 35px;
-    line-height: 57px;
-    letter-spacing: -1.325px;
-    text-transform: uppercase;
-}
-
-/* Center column */
+/* Center and Right column */
 .centerColumn,
 .rightColumn {
     background: #F1F1F1;
     padding: 20px;
     border-radius: 10px;
-    
+    flex: 1; /* Make the center and right columns smaller */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.sectionHeading,
+.leftColumnHeading,
+.rightColumnHeading {
+    font-size: 35px;
+    line-height: 57px;
+    letter-spacing: -1.325px;
+    text-transform: uppercase;
 }
 
 .sectionText,
@@ -59,7 +65,8 @@
     line-height: 36px;
     letter-spacing: 0.67px;
 }
-.rightColumnHeading{
+
+.leftColumnHeading {
     font-size: 35px;
     line-height: 57px;
     letter-spacing: -1.325px;
@@ -67,14 +74,14 @@
 }
 
 /* Responsive adjustments */
+
+/* For tablets and smaller devices (768px and below) */
 @media (max-width: 768px) {
     .howItsWorksColumns {
         flex-direction: column;
         gap: 20px;
     }
- 
 
-   
     .howItsWorksHeader {
         font-size: 36px;
     }
@@ -87,5 +94,90 @@
     .sectionText,
     .rightColumnText {
         font-size: 18px;
+    }
+}
+
+/* For larger tablets and small desktop screens (1024px and below) */
+@media (max-width: 1024px) {
+    .howItsWorksHeader {
+        font-size: 42px;
+    }
+
+    .howItsWorksColumns {
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .leftColumnHeading,
+    .sectionHeading {
+        font-size: 34px;
+    }
+
+    .sectionText,
+    .rightColumnText {
+        font-size: 19px;
+    }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .howItsWorksHeader {
+        font-size: 28px;
+    }
+
+    .howItsWorksColumns {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .leftColumn {
+        padding: 15px;
+    }
+
+    .centerColumn,
+    .rightColumn {
+        padding: 15px;
+    }
+
+    .leftColumnHeading,
+    .sectionHeading {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .sectionText,
+    .rightColumnText {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+/* For very small mobile devices (360px and below) */
+@media (max-width: 360px) {
+    .howItsWorksHeader {
+        font-size: 24px;
+    }
+
+    .leftColumnHeading,
+    .sectionHeading {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .sectionText,
+    .rightColumnText {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .howItsWorksColumns {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .leftColumn,
+    .centerColumn,
+    .rightColumn {
+        padding: 10px;
     }
 }

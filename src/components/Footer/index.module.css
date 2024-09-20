@@ -112,61 +112,16 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footerGroup {
-    padding: 32px;
     flex-direction: column;
     align-items: center;
   }
 
-  .rightSection {
-    width: 100%;
-    max-width: none;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .footerLinks {
-    gap: 40px;
-    justify-content: center;
-  }
-
-  .contactInfo {
-    flex-direction: column; /* Stack contact info and social media vertically */
-    gap: 16px;
-  }
-
-  .socialMedia {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 768px) {
   .footerGroup {
     padding: 16px;
-  }
-
-  .leftSection {
-    width: 100%;
-    text-align: center;
-  }
-
-  .rightSection {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .footerLinks {
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .contactInfo {
-    gap: 16px; /* More gap between contact info and social icons */
-    /* flex-direction:row; */
-  }
-
-  .socialMedia {
-    justify-content: center;
   }
 }
 
@@ -174,23 +129,5 @@
   .companyName {
     font-size: 24px;
     line-height: 30px;
-  }
-
-  .companyDesc {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .linkGroup li {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .socialIcon {
-    font-size: 20px;
-  }
-
-  .contactInfo {
-    gap: 12px; /* Slightly tighter gap on small devices */
   }
 }
