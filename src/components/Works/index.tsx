@@ -1,50 +1,83 @@
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import Slider from 'react-slick';
 
 const workList = [
-  { imageUrl: '/Cover (1).png' },
-  { imageUrl: '/Cover (2).png' },
-  { imageUrl: '/Cover (3).png' },
-  { imageUrl: '/Cover (4).png' },
-  { imageUrl: '/Cover (5).png' },
-  { imageUrl: '/Cover (6).png' },
+  { imageUrl: '/cover_1.png' },
+  { imageUrl: '/cover_2.png' },
+  { imageUrl: '/cover_3.png' },
 ];
+
+// Custom arrow components
+const NextArrow = ({ onClick }) => (
+  <div className={styles.arrowRight} onClick={onClick}>
+    <FaArrowRight />
+  </div>
+);
+
+const PrevArrow = ({ onClick }) => (
+  <div className={styles.arrowLeft} onClick={onClick}>
+    <FaArrowLeft />
+  </div>
+);
 
 const Works = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    if (currentIndex < workList.length - 3) {
-      setCurrentIndex(currentIndex + 3);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 3);
-    }
+  const settings = {
+    dots: true,
+    speed: 500,
+    slidesToShow: 2.7, // Default for larger screens
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 1000,
+    nextArrow: <NextArrow />, // Using custom right arrow
+    prevArrow: <PrevArrow />, // Using custom left arrow
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet
+        settings: {
+          slidesToShow: 2, // Show 2 items on tablets
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile landscape
+        settings: {
+          slidesToShow: 1.5, // Show 1.5 items on mobile landscape
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Mobile portrait
+        settings: {
+          slidesToShow: 1, // Show 1 item on small mobile devices
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.arrowLeft} onClick={handlePrev}>
-        <FaArrowLeft />
-      </div>
-      <div className={styles.arrowRight} onClick={handleNext}>
-        <FaArrowRight />
-      </div>
-
-      <div className={styles.square}>
-        {workList.slice(currentIndex, currentIndex + 3).map((work) => (
-          <div className={styles.imageWrapper} key={work.imageUrl}>
-            <img src={work.imageUrl} alt="Work Image" />
-          </div>
-        ))}
+      {/* Carousel */}
+      <div style={{ width: '100%' }}>
+        <Slider {...settings}>
+          {workList.map((work, index) => (
+            <div key={index}>
+              <img src={work.imageUrl} alt={`Work Image ${index + 1}`} />
+            </div>
+          ))}
+        </Slider>
       </div>
 
+      {/* View All Work Button */}
       <div className={styles.viewAllWorkWrapper}>
         <div className={styles.viewAllWorkButton}>VIEW OUR RECENT WORK</div>
       </div>
