@@ -92,10 +92,10 @@
 
 /* Bottom Image */
 .bottomImage {
-  position: absolute;
-  left: 10%;
+  position: relative;
+  left: -39%;
   height: 150px;
-  bottom: 0;
+  bottom: 87px;
 }
 
 /* Responsive Adjustments */
@@ -162,9 +162,12 @@
   }
 
   .faqItem {
-    width: 350px;
-    margin-left: 28px;
+    width: 100%; /* Make it take the full width */
+    max-width: 320px; /* Set a max-width for better control */
+    margin: 0 auto; /* Center the FAQ item */
+    padding: 14px; /* Add some padding */
   }
+
 
   .faqQuestion {
       font-size: 16px;
@@ -180,10 +183,27 @@
     margin-top: 80px;
   }
 
-  .faqItem{
-    width: 350px;
-
+  .faqItem {
+    width: 100%; /* Make it take the full width */
+    max-width: 320px; /* Set a max-width for better control */
+    margin: 0 auto; /* Center the FAQ item */
+    padding: 14px; /* Add some padding */
   }
 
- 
+  .faqText {
+    width: 100%; /* Ensure the text fits within the FAQ item */
+  }
+
+  .faqQuestion {
+    font-size: 16px;
+  }
+
+  .faqAnswer {
+    font-size: 12px;
+  }
+  .viewAllWorkButton{
+    width: 40%;
+  }
 }
+
+
