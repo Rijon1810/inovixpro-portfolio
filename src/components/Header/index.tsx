@@ -7,17 +7,16 @@ const Header = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
+    document.body.classList.toggle('menu-open', !menuOpen);
   };
 
   return (
     <>
       {/* Add backdrop when menu is open */}
-      <div className={`${styles.backdrop} ${menuOpen ? styles.active : ''}`} onClick={toggleMenu}></div>
+      <div
+        className={`${styles.backdrop} ${menuOpen ? styles.active : ''}`}
+        onClick={toggleMenu}
+      ></div>
 
       <header className={styles.header}>
         <div className={styles.logo}>
