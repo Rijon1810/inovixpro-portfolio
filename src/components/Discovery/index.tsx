@@ -23,9 +23,9 @@ const Discovery: React.FC = () => {
         <div className={styles.personalInfo}>
           <div className={styles.imageGroup}>
             <img className={styles.size} src="/Rijon.png" alt="Rijon" />
-            <img className={styles.size} src="/1000x1000.jpg" alt="Shabbir" />
+            {/* <img className={styles.size} src="/1000x1000.jpg" alt="Shabbir" /> */}
           </div>
-          <div className={styles.name}>Rijon & Shabbir</div>
+          <div className={styles.name}>Rijon</div>
           <div className={styles.title}>Chief Executive Officers</div>
           <div className={styles.duration}>30 min</div>
         </div>
