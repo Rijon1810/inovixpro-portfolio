@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 const HowItsWorks: React.FC = () => {
   return (
-    <div className={styles.howItsWorksWrapper}>
+    <div className={styles.howItsWorksWrapper} id='how-it-works'>
       <div className={styles.howItsWorksHeader}>How It Works</div>
       <div className={styles.howItsWorksColumns}>
         <div className={styles.leftColumn}>

@@ -29,13 +29,13 @@ const Works = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.arrowLeft} onClick={handlePrev}>
+    <div className={styles.wrapper} id='works'>
+      {/* <div className={styles.arrowLeft} onClick={handlePrev}>
         <FaArrowLeft />
       </div>
       <div className={styles.arrowRight} onClick={handleNext}>
         <FaArrowRight />
-      </div>
+      </div> */}
 
       <div className={styles.square}>
         {workList.slice(currentIndex, currentIndex + 3).map((work) => (

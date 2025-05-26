@@ -19,7 +19,7 @@ const Questions: React.FC = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='faq'>
       <img src="Frame (2).png" alt="" className={styles.topImage} />
       <div className={styles.content}>
         <div className={styles.qAndA}>Q&A</div>

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './index.module.css';
 
 const Header = () => {
@@ -9,6 +9,32 @@ const Header = () => {
     setMenuOpen(!menuOpen);
     document.body.classList.toggle('menu-open', !menuOpen);
   };
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMenuOpen(false); // Close the menu after clicking on mobile
+    document.body.classList.remove('menu-open');
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: { key: string; }) => {
+      if (event.key.toLowerCase() === 'c') {
+        const bookACallSection = document.getElementById('book-a-call');
+        if (bookACallSection) {
+          bookACallSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
@@ -24,10 +50,36 @@ const Header = () => {
         </div>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.showMenu : ''}`}>
-          <a href="#" className={styles.navItem}>HOW IT WORKS</a>
-          <a href="#" className={styles.navItem}>PRICING</a>
-          <a href="#" className={styles.navItem}>WORK</a>
-          <a href="#" className={styles.navItem}>FAQ</a>
+          <a 
+            href="#works" 
+            className={styles.navItem}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('works');
+            }}
+          >
+            WORKS
+          </a>
+          <a 
+            href="#how-it-works" 
+            className={styles.navItem}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('how-it-works');
+            }}
+          >
+            HOW IT WORKS
+          </a>
+          <a 
+            href="#faq" 
+            className={styles.navItem}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('faq');
+            }}
+          >
+            FAQ
+          </a>
         </nav>
 
         <div className={styles.rightSide}>
